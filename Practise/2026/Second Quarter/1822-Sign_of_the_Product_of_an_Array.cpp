@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int signFxn(vector<int>&nums){
+        int neg = 0;
+        for(int num:nums){
+            if(num==0){
+                return 0;
+            }else if(num <0){
+                neg++;
+            }
+        }
+        return (neg%2==0) ? 1 : -1;
+    }
+    int arraySign(vector<int>& nums) {
+        return signFxn(nums);
+    }
+};
