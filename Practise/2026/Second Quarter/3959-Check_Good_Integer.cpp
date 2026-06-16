@@ -14,3 +14,5 @@ public:
         return (sq-sum)>=50;
     }
 };
+
+
