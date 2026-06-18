@@ -1,19 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
 class Solution {
 public:
     string processStr(string s) {
-        string ans ="";
-        for(char ch:s){
-            if(ch>='a' && ch<='z'){
-                ans+=ch;
-            }else if(ch=='#'){
-                ans+=ans;
-            }else if(ch=='*'){
-                ans.pop_back();
-            }else{
-                reverse(ans.begin(),ans.end());
+        string ans = "";
+        for (char ch : s) {
+            if (ch >= 'a' && ch <= 'z') {
+                ans += ch;
+            } else if (ch == '#') {
+                ans += ans;
+            } else if (ch == '*') {
+                if (ans.length()) {
+                    ans.pop_back();
+                }
+            } else {
+                reverse(ans.begin(), ans.end());
             }
         }
         return ans;

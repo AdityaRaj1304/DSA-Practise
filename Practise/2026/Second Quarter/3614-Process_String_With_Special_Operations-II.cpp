@@ -1,22 +1,44 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
 class Solution {
 public:
-    string processStr(string s) {
-        string ans ="";
+    char processStr(string s, long long k) {
+        long long len = 0;
         for(char ch:s){
-            if(ch>='a' && ch<='z'){
-                ans+=ch;
-            }else if(ch=='#'){
-                ans+=ans;
+            if(islower(ch)){
+                len++;
             }else if(ch=='*'){
-                ans.pop_back();
-            }else{
-                reverse(ans.begin(),ans.end());
+                if(len>0){
+                    len--;
+                }
+            }else if(ch=='#'){
+                len*=2;
             }
         }
-        return ans;
+        if(k>=len){
+            return '.';
+        }
+        for(int i = s.size()-1;i>=0;i--){
+            char ch = s[i];
+            if(islower(ch)){
+                if(k==len-1){
+                    return ch;
+                }
+                len--;
+            }else if(ch=='*'){
+                len++;
+            }else if(ch=='#'){
+                len/=2;
+                k%=len;
+            }else{
+                k=len-1-k;
+            }
+        }
+        return '.';
     }
 };
+
+
 
