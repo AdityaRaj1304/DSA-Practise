@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution {
+class Solution {//Better Graph Approach
 public:
     int findJudge(int n, vector<vector<int>>& trust) {
         vector<int>in(n+1,0),out(n+1,0);
