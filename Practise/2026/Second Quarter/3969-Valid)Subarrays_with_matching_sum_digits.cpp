@@ -51,21 +51,3 @@ public:
 
 
 
-
-class Solution {
-public:
-    int maxTotalValue(vector<int>& value, vector<int>& decay, int m) {
-        vector<pair<int,int>>arr;
-        for(int i =0;i<value.size();i++){
-            arr.push_back({value[i],decay[i]});
-        }
-        sort(arr.begin(),arr.end());
-        int ans = 0;
-        for(int i=0;i<m;i++){
-            ans += arr[0].first;
-            arr[0].first-=arr[0].second;
-            arr.push_back({value[i],decay[i]});
-        }
-        return ans;
-    }
-};
