@@ -11,3 +11,5 @@ public:
         return (n*n)/4;
     }
 };
+
+
