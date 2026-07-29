@@ -1,0 +1,17 @@
+# Ignore documents
+*.txt
+*.pdf
+
+# Ignore images
+*.png
+*.jpg
+*.jpeg
+
+# Ignore compiled files
+*.exe
+*.out
+*.o
+*.obj
+
+# VS Code settings
+.vscode/
