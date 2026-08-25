@@ -86,3 +86,42 @@ public:
         return ans;
     }
 };
+
+
+class Solution {
+public:
+    vector<bool> validSubarrays(vector<int>& nums, int k, vector<vector<int>>& queries) {
+        vector<bool>ans;
+        for(auto &query:queries){
+            unordered_map<int,int>freq;
+            for(int i=query[0];i<=query[1];i++){
+                freq[nums[i]]++;
+            }
+            if(freq.size()!=k){
+                ans.push_back(false);
+            }else{
+                bool valid = true;
+                for(auto it:freq){
+                    if(it.second%2){
+                        valid=false;
+                        ans.push_back(valid);
+                        break;
+                    }
+                }
+                if(valid)
+                ans.push_back(true);
+            }
+        }
+        return ans;
+    }
+};
+
+
+
+
+
+
+
+
+
+
