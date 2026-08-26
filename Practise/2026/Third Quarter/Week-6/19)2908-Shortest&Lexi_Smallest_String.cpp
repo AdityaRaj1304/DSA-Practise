@@ -38,3 +38,33 @@ public:
         return ans == "{" ? "" : ans;
     }
 };
+
+
+
+class Solution {
+public:
+    string shortestBeautifulSubstring(string s, int k) {
+        int n = s.size();
+        vector<int>count;
+        for(int i =0;i<n;i++){
+            if(s[i]=='1'){
+                count.push_back(i);
+            }
+        }
+        int size =INT_MAX;
+        string ans = "{";
+        for(int i =0;i<n-k;i++){
+            int len = count[i+k-1]-count[i];
+            if(len<size){
+                ans=s.substr(i,len);
+                size=len;
+            }else if(len==size){
+                string curr = ans=s.substr(i,len);
+                if (curr < ans) {
+                    ans = curr;
+                }
+            }
+        }
+        return ans;
+    }
+};
