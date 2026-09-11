@@ -19,19 +19,23 @@ public:
     }
 };
 
+
+
 class Solution {
 public:
-    int buyChoco(vector<int>& prices, int money) {
-        int first = 101 , second = 101;
-        for(int p:prices){
-            if(p<first){
-                second=first;
-                first=p;
-                
-            }else if(p<second){
-                second =p;
+    bool canFormArray(vector<int>& arr, vector<vector<int>>& pieces) {
+        int n = arr.size();
+        for(auto& v:pieces){
+            int j = 0;
+            while(arr[j]!=v[0]){
+                j++;
+            }
+            for(int i =0;i<pieces.size();i++){
+                if(j+i>=n||arr[j+i]!=v[i]){
+                    return false;
+                }
             }
         }
-        return first+second<=money ? money-(first+second):money;
+        return true;
     }
 };
