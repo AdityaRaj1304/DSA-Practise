@@ -4,30 +4,6 @@ using ll = long long;
 
 class Solution {
 public:
-    string hexDecimal(int n){
-        string ans = "";
-        while(n){
-            int digit = n%16;
-            if(digit>10){
-                ans+=(char)digit-10+'a';
-            }else{
-                ans+=digit-'0';
-            }
-        }
-        reverse(ans.begin(),ans.end());
-        return ans;
-    }
-    string toHex(int num) {
-        if(num<0){
-            return hexDecimal(~num+1);
-        }
-        return hexDecimal(num);
-    }
-};
-
-
-class Solution {
-public:
     int countIntersectingIntervals(vector<vector<int>>& intervals) {
         int n = intervals.size();
         sort(intervals.begin(),intervals.end(),[](auto&a,auto&b){
@@ -47,3 +23,5 @@ public:
         return ans;
     }
 };
+
+
