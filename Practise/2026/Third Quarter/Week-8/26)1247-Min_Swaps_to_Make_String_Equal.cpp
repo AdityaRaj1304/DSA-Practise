@@ -19,3 +19,4 @@ public:
         return xy/2+yx/2+xy%2+yx%2;
     }
 };
+
