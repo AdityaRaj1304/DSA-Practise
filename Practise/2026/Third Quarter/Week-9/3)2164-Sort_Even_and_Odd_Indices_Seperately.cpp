@@ -2,6 +2,38 @@
 using namespace std;
 using ll = long long;
 
+class Solution { //O(n)
+public:
+    vector<int> sortEvenOdd(vector<int>& nums) {
+        int n = nums.size();
+        vector<int>even(101,0),odd(101,0);
+        for(int i=0;i<n;i++){
+            if(i%2==0){
+                even[nums[i]]++;
+            }else{
+                odd[nums[i]]++;
+            }
+        }
+        int e=0,o=100;
+        for(int i =0;i<n;i++){
+            if(i%2==0){
+                while(!even[e]){
+                    e++;
+                }
+                nums[i]=e;
+                even[e]--;
+            }else{
+                while(!odd[o]){
+                    o--;
+                }
+                nums[i]=o;
+                odd[o]--;
+            }
+        }
+        return nums;
+    }
+};
+
 class Solution { //O(nlogn)
 public:
     vector<int> sortEvenOdd(vector<int>& nums) {
@@ -33,9 +65,3 @@ public:
     }
 };
 
-class Solution {
-public:
-    vector<int> sortEvenOdd(vector<int>& nums) {
-        
-    }
-};
