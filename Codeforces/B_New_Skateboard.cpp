@@ -7,7 +7,7 @@ void solve() {
   cin.tie(NULL);
   string s;
   cin >> s;
-  int ans = 0;
+  ll ans = 0;
   for(int i =0;i<s.size();i++){
     int digit = s[i]-'0';
     if(digit%4==0){
