@@ -10,6 +10,9 @@ void solve() {
     int a = INT_MAX ,b=INT_MAX;
     int ans =0;
     for(int num:arr){
+        if(a>b){
+            swap(a,b);
+        }
         if(num<=a){
             a=num;
         }else if(num<=b){
