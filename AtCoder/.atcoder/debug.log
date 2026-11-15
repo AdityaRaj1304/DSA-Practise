@@ -440,3 +440,103 @@
 }
 [2026-11-15T09:04:17.062Z] Webview debug: script loaded
 ""
+[2026-11-15T10:08:58.041Z] Received webview message: debug
+{
+  "type": "debug",
+  "text": "script loaded",
+  "extra": ""
+}
+[2026-11-15T10:08:58.041Z] Webview debug: script loaded
+""
+[2026-11-15T10:14:27.988Z] Received webview message: runSamples
+{
+  "type": "runSamples",
+  "filePath": "",
+  "problemId": "abc484_c"
+}
+[2026-11-15T10:14:34.098Z] Received webview message: debug
+{
+  "type": "debug",
+  "text": "script loaded",
+  "extra": ""
+}
+[2026-11-15T10:14:34.099Z] Webview debug: script loaded
+""
+[2026-11-15T10:15:11.770Z] Received webview message: selectProblem
+{
+  "type": "selectProblem",
+  "problemId": ""
+}
+[2026-11-15T10:15:11.798Z] Received webview message: debug
+{
+  "type": "debug",
+  "text": "script loaded",
+  "extra": ""
+}
+[2026-11-15T10:15:11.798Z] Webview debug: script loaded
+""
+[2026-11-15T10:15:13.373Z] Received webview message: debug
+{
+  "type": "debug",
+  "text": "direct problem click",
+  "extra": "abc484_d"
+}
+[2026-11-15T10:15:13.373Z] Webview debug: direct problem click
+"abc484_d"
+[2026-11-15T10:15:13.373Z] Received webview message: selectProblem
+{
+  "type": "selectProblem",
+  "problemId": "abc484_d"
+}
+[2026-11-15T10:15:13.396Z] Received webview message: debug
+{
+  "type": "debug",
+  "text": "script loaded",
+  "extra": ""
+}
+[2026-11-15T10:15:13.396Z] Webview debug: script loaded
+""
+[2026-11-15T10:15:14.029Z] Received webview message: debug
+{
+  "type": "debug",
+  "text": "script loaded",
+  "extra": ""
+}
+[2026-11-15T10:15:14.029Z] Webview debug: script loaded
+""
+[2026-11-15T10:35:23.584Z] Received webview message: debug
+{
+  "type": "debug",
+  "text": "script loaded",
+  "extra": ""
+}
+[2026-11-15T10:35:23.584Z] Webview debug: script loaded
+""
+[2026-11-15T10:37:29.597Z] Received webview message: runSamples
+{
+  "type": "runSamples",
+  "filePath": "",
+  "problemId": "abc484_d"
+}
+[2026-11-15T10:37:34.623Z] Received webview message: debug
+{
+  "type": "debug",
+  "text": "script loaded",
+  "extra": ""
+}
+[2026-11-15T10:37:34.624Z] Webview debug: script loaded
+""
+[2026-11-15T10:38:02.268Z] Received webview message: runSamples
+{
+  "type": "runSamples",
+  "filePath": "",
+  "problemId": "abc484_d"
+}
+[2026-11-15T10:38:07.261Z] Received webview message: debug
+{
+  "type": "debug",
+  "text": "script loaded",
+  "extra": ""
+}
+[2026-11-15T10:38:07.262Z] Webview debug: script loaded
+""
