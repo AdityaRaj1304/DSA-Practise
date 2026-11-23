@@ -28,3 +28,24 @@ public:
         return ans;
     }
 };
+
+using ll = long long;
+class Solution {
+public:
+    long long minCost(vector<int>& nums) {
+        int n = nums.size();
+        ll ans = LLONG_MAX;
+        for(int i =0;i<n-1;){
+            int j =i+1;
+            while(j<n&&nums[i]==nums[j]){
+                j++;
+            }
+            if(j>1){
+                int range = i+n-j;
+                ans = min(ans, 1LL*nums[i]*range);
+            }
+            i=j;
+        }
+        return ans;
+    }
+};
